@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="index.css"></link>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+		<script src="jscolor.min.js"></script>
+	</head>
+	<body>
+		<div id="outer">
+			<div id="menu">
+				<div class="menu-item"><i class="fas fa-info-circle menu-icon" aria-hidden="true"></i>Instructions</div>
+				<div class="menu-item" id="refresh"><i class="fas fa-sync menu-icon" aria-hidden="true"></i>Refresh</div>
+			</div>
+
+			<div id="main">
+				<canvas id="canvas"></canvas>
+				<div id="play-button">
+					<i class="fas fa-play-circle hover" aria-hidden="true"></i>
+					<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
+				</div>
+			</div>
+
+			<div id="instructions">
+				<div id="controls">
+					<input class="jscolor" id="add-input"/>
+					<div id="add-button">Add Colour</div>
+				</div>
+				<div id="colour-list"></div>
+			</div>
+		<script src="data.js"></script>
+		<script src="som.js"></script>
+		<script src="colour-list.js"></script>
+		<script src="colour-picker.js"></script>
+		<script src="helper.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
