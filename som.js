@@ -38,7 +38,7 @@ SOM.prototype.gridWidth = 0.2;
 
 SOM.prototype.dataIndex = 0;
 
-SOM.prototype.animation = null;
+SOM.prototype.animate = false;
 
 SOM.prototype.background = {red: 89, green: 89, blue: 89};
 
@@ -49,11 +49,20 @@ SOM.prototype.resize = function(){
 }
 
 SOM.prototype.restart = function(data){
+	this.animate = false;
+	this.dataIndex = 0;
+
+	setTimeout(function(){
+		this.updateData(data);
+		this.setCanvasOpacity(this.pauseOpacity);
+		showPlayButton();
+	}.bind(this), 500);
+}
+
+SOM.prototype.updateData = function(data){
 	this.data = data.slice();
 	this.assignRandomWeights();
-	this.setCanvasOpacity(this.pauseOpacity);
 	this.colourNodes();
-	showPlayButton();
 }
 
 SOM.prototype.nextDataIndex = function(){
@@ -184,36 +193,27 @@ SOM.prototype.updateNodeWeights = function(t, bestNode, trainData){
 }
 
 SOM.prototype.animateNodes = function(t){
-	// Create separate som variable to pass into request animation frame
-	var som = this;
-
 	// Find node closest to current training point and update colours around it
-	var trainData = som.data[som.dataIndex];
-	var bestNode = som.nearestNode(trainData);
+	var trainData = this.data[this.dataIndex];
+	var bestNode = this.nearestNode(trainData);
 
-	som.updateNodeWeights(t, bestNode, trainData);
+	this.updateNodeWeights(t, bestNode, trainData);
 
 	// Move on to next training point
-	som.nextDataIndex();
+	this.nextDataIndex();
 
-	if (som.dataIndex == 0){
+	if (this.dataIndex == 0){
 		t++;
 	}
 
-	// Check if animation was restarted
-	if (!som.animate){
-		som.restart(colourData);
-		return;
-	}
-
 	// Check if animation should continue
-	if (t > som.nIter){
+	if (t > this.nIter  || !this.animate){
 		return;
 	}
 
 	window.requestAnimationFrame(function(){
-		som.animateNodes(t);
-	})
+		this.animateNodes(t);
+	}.bind(this))
 }
 
 SOM.prototype.startSOM = function(){

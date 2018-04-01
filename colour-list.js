@@ -1,5 +1,6 @@
-function ColourList(container){
-	this.container = container;
+function ColourList(containerId, som){
+	this.container = document.getElementById(containerId);
+	this.som = som;
 	this.root = null;
 	this.tail = null;
 	this.size = 0;
@@ -22,6 +23,10 @@ ColourList.prototype.add = function(colour){
 		this.tail = newColour;
 	}
 
+	if (this.som.animate == false){
+		this.som.updateData(this.getColours());
+	}
+
 	this.size++;
 }
 
@@ -37,4 +42,16 @@ ColourList.prototype.search = function(colour){
 	}
 
 	return false;
+}
+
+ColourList.prototype.getColours = function(){
+	var colours = [];
+	var currColour = this.root;
+
+	while (currColour != null){
+		colours.push(currColour.getColour());
+		currColour = currColour.next;
+	}
+
+	return colours;
 }

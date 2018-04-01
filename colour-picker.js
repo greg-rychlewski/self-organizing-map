@@ -8,10 +8,12 @@ function ColourPicker(colourList, initColour){
 
 	// Create input element
 	this.input = document.createElement("input");
+	
 	var colourPicker = new jscolor(this.input);
 	colourPicker.fromRGB(initColour.red, initColour.green, initColour.blue);
-
-	this.container.appendChild(this.input);
+	colourPicker.showOnClick = false;
+	
+	this.input.readOnly = true;
 
 	// Create remove button
 	this.removeButton = document.createElement("div");
@@ -19,6 +21,8 @@ function ColourPicker(colourList, initColour){
 	this.removeButton.classList.add("colour-remove");
 	this.removeButton.addEventListener("click", this.delete.bind(this));
 
+	// Bundle everything inside container
+	this.container.appendChild(this.input);
 	this.container.appendChild(this.removeButton);
 }
 
@@ -48,5 +52,10 @@ ColourPicker.prototype.delete = function(){
 	}
 
 	this.colourList.container.removeChild(this.container);
+
+	if (this.colourList.som.animate == false){
+		this.colourList.som.updateData(this.colourList.getColours());
+	}
+
 	this.colourList.size--;
 }
