@@ -111,15 +111,20 @@ html, body{
 	transition: 0.5s;
 	overflow-y: hidden;
 	font-size: 12px;
+	text-align: justify;
 }
 
-#instructions-text{
-	margin: 0 15px;
+.instructions-text{
+	padding-left: 5%;
+	padding-right: 5%;
+	padding-bottom: 2%;
 }
 
 #instructions-close{
 	cursor: pointer;
-	padding: 10px;
+	padding-right: 2%;
+	padding-top: 1%;
+	padding-bottom: 1%;
 	text-align: right;
 }
 
@@ -258,7 +263,7 @@ input{
 	}
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 360px){
 	.menu-item{
 		font-size: 10px;
 		padding: 15px 10px;
@@ -301,5 +306,15 @@ input{
 
 	#play-button{
 		font-size: 40px;
+	}
+}
+
+@media screen and (max-width: 250px){
+	.menu-item{
+		font-size: 12px;
+		padding: 15px 20px;
+	}
+	.menu-text{
+		display: none;
 	}
 }
