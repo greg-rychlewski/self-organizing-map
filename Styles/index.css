@@ -18,6 +18,11 @@ html, body{
 	height: 100%;
 }
 
+a{
+	color: #fff;
+	text-decoration: none;
+}
+
 /* Menu */
 #menu{
 	position: relative;
@@ -33,11 +38,17 @@ html, body{
 }
 
 .menu-item{
-	cursor: pointer;
 	display: inline-block;
+	text-align: center;
 	color: #fff;
 	font-size: 12px;
-	padding: 20px 20px;
+	width: 30%;
+}
+
+#menu-restart, #menu-instructions, #menu-git{
+	display: inline-block;
+	padding: 20px 0px;
+	cursor: pointer;
 }
 
 .menu-icon{
@@ -257,16 +268,11 @@ input{
 	#colour-add{
 		width:34%;
 	}
-
-	.menu-item{
-		padding: 20px 12px
-	}
 }
 
 @media screen and (max-width: 360px){
 	.menu-item{
 		font-size: 10px;
-		padding: 15px 10px;
 	}
 
 	#instructions{
@@ -292,8 +298,10 @@ input{
 
 @media screen and (max-width: 300px){
 	.menu-item{
-		font-size: 9px;
-		padding: 15px 5px
+		font-size: 12px;
+	}
+	.menu-text{
+		display: none;
 	}
 
 	#instructions{
@@ -306,15 +314,5 @@ input{
 
 	#play-button{
 		font-size: 40px;
-	}
-}
-
-@media screen and (max-width: 250px){
-	.menu-item{
-		font-size: 12px;
-		padding: 15px 20px;
-	}
-	.menu-text{
-		display: none;
 	}
 }
