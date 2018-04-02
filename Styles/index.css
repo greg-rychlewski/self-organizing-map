@@ -32,7 +32,7 @@ a{
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
-	width: 80%;
+	width: 100%;
 	max-width: 800px;
 	text-align: center;
 }
@@ -42,7 +42,7 @@ a{
 	text-align: center;
 	color: #fff;
 	font-size: 12px;
-	width: 30%;
+	width: 33.3%;
 }
 
 #menu-restart, #menu-instructions, #menu-git{
