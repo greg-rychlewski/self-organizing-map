@@ -1,5 +1,5 @@
 // Initialize self-organizing map
-var som = new SOM("canvas", {row: 50, col: 100}, colourData, identity, 0.08, 150);
+var som = new SOM("canvas", {row: 50, col: 100}, colourData, identity, 0.08, 200);
 
 // Initialize colour list
 var colourList = new ColourList("colour-list", som);
@@ -22,6 +22,16 @@ document.getElementById("add-button").addEventListener("click", function(){
 	colourList.add(newColour);
 });
 
-document.getElementById("restart").addEventListener("click", function(){
+document.getElementById("menu-restart").addEventListener("click", function(){
 	som.restart(colourList.getColours());
 });
+
+document.getElementById("menu-instructions").addEventListener("click", function(){
+	var instructions = document.getElementById("instructions");
+	instructions.style.width = "50%";
+});
+
+document.getElementById("instructions-close").addEventListener("click", function(){
+	var instructions = document.getElementById("instructions");
+	instructions.style.width = "0";
+})

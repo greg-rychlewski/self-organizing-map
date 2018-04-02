@@ -45,26 +45,10 @@ html, body{
 	display: none;
 }
 
-#restart:hover .menu-icon{
+#menu-restart:hover .menu-icon{
 	-webkit-animation:spin 0.5s linear;
     -moz-animation:spin 0.5s linear;
     animation:spin 0.5s linear;
-}
-
-@-moz-keyframes spin{
-	100%{ 
-		-moz-transform: rotate(180deg); 
-	} 
-}
-@-webkit-keyframes spin{ 
-	100%{ 
-		-webkit-transform: rotate(180deg); 
-	} 
-}
-@keyframes spin{ 
-	100%{ 
-		transform: rotate(180deg); 
-	} 
 }
 
 /* Content */
@@ -102,11 +86,43 @@ html, body{
 	filter: drop-shadow( 0 0 1px rgba(0, 0, 0, 0.5) );
 } 
 
+/* Instructions */
+#instructions{
+	position: absolute;
+	height:100%;
+	width: 0;
+	top: 0%;
+	background: #333;
+	color: #e2e2e2;
+	transition: 0.5s;
+	overflow-x: hidden;
+	font-size: 12px;
+}
+
+#instructions-text{
+	margin-left: 25px;
+	margin-right: 25px;
+	margin-bottom: 25px;
+	margin-top: 35px;
+}
+
+#instructions-close{
+	position:absolute;
+	cursor: pointer;
+	right: 0;
+	padding: 15px;
+}
+
 /* Controls */
-#controls{
+#colour-add{
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
+}
+
+#colour-add input{
+	width: 13%;
+	cursor: pointer;
 }
 
 #add-button{
@@ -118,15 +134,9 @@ html, body{
 	margin-left: 20px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 1);
-	text-shadow: 0 0 0.5px rgba(0, 0, 0, 1);
-	color: #333;
-	background: #e2e2e2;
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.55);
 	font-size: 12px;
-}
-
-#add-button:hover{
 	background: #fff;
-	color: #000;
 }
 
 #colour-list{
@@ -159,11 +169,6 @@ input{
 	font-size: 10px;
 }
 
-#controls input{
-	width: 13%;
-	cursor: pointer;
-}
-
 #colour-list input{
 	width: 80%;
 	cursor: default;
@@ -176,4 +181,21 @@ input{
 	margin-left: 5px;
 	font-size: 10px;
 	vertical-align: top;
+}
+
+/* Animations */
+@-moz-keyframes spin{
+	100%{ 
+		-moz-transform: rotate(180deg); 
+	} 
+}
+@-webkit-keyframes spin{ 
+	100%{ 
+		-webkit-transform: rotate(180deg); 
+	} 
+}
+@keyframes spin{ 
+	100%{ 
+		transform: rotate(180deg); 
+	} 
 }

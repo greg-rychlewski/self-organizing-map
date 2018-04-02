@@ -7,8 +7,8 @@
 	<body>
 		<div id="outer">
 			<div id="menu">
-				<div class="menu-item"><i class="fas fa-info-circle menu-icon" aria-hidden="true"></i>Instructions</div>
-				<div class="menu-item" id="restart"><i class="fas fa-sync menu-icon" aria-hidden="true"></i>Restart</div>
+				<div class="menu-item" id="menu-instructions"><i class="fas fa-info-circle menu-icon" aria-hidden="true"></i>Instructions</div>
+				<div class="menu-item" id="menu-restart"><i class="fas fa-sync menu-icon" aria-hidden="true"></i>Restart</div>
 			</div>
 
 			<div id="main">
@@ -17,11 +17,17 @@
 					<i class="fas fa-play-circle hover" aria-hidden="true"></i>
 					<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
 				</div>
+				<div id="instructions">
+					<div id="instructions-close">&#10006;</div>
+					<p id="instructions-text">Lorem ipsum dolor sit amet, ex dictas appetere mea, est novum vivendo delicatissimi eu, iusto vitae sententiae est an. 
+					Suscipit quaestio delicatissimi ei vis, an saperet noluisse eos. Ea etiam laoreet dissentias qui, no vis vide meis. 
+					Ne his viris graeci, ne meis essent facete vix. Porro minimum ut nec. Ludus constituam no has.</p>
+				</div>
 			</div>
 
-			<div id="instructions">
-				<div id="controls">
-					<input class="jscolor" id="add-input"/>
+			<div id="controls">
+				<div id="colour-add">
+					<input class="jscolor" id="add-input" value="b8860b"/>
 					<div id="add-button">Add Colour</div>
 				</div>
 				<div id="colour-list"></div>
