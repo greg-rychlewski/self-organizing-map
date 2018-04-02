@@ -13,19 +13,29 @@
 }
 
 html, body{
+	position: relative;
+	background: #333;
 	height: 100%;
 }
 
-#outer{
-	min-height: 100%;
-	background: #333;
+/* Menu */
+#menu{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	width: 80%;
+	max-width: 800px;
+	text-align: center;
 }
 
-/* Menu */
 .menu-item{
 	cursor: pointer;
 	display: inline-block;
-	color: #e2e2e2;
+	color: #fff;
 	font-size: 12px;
 	padding-left: 10px;
 	padding-right: 25px;
@@ -35,14 +45,6 @@ html, body{
 
 .menu-icon{
 	margin-right: 7px;
-}
-
-#play-button .no-hover, #play-button:hover .hover{
-	display: inline;
-}
-
-#play-button .hover, #play-button:hover .no-hover{
-	display: none;
 }
 
 #menu-restart:hover .menu-icon{
@@ -57,6 +59,7 @@ html, body{
 	padding-top: 40px;
 	padding-bottom: 40px;
 	background: #fff;
+	width: 100%;
 }
 
 #canvas{
@@ -65,20 +68,28 @@ html, body{
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
 }
 
 #play-button{
 	cursor: pointer;
-	font-size: 10vw;
-	color: #e2e2e2;
+	font-size: 90px;
+	color: #fff;
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-webkit-transform: translate(-50%, -50%);
 	-moz-transform: translate(-50%, -50%);
-	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+#play-button .no-hover, #play-button:hover .hover{
+	display: inline;
+}
+
+#play-button .hover, #play-button:hover .no-hover{
+	display: none;
 }
 
 #play-button .fa-play-circle{
@@ -89,71 +100,95 @@ html, body{
 /* Instructions */
 #instructions{
 	position: absolute;
-	height:100%;
-	width: 0;
 	top: 0%;
-	background: #333;
-	color: #e2e2e2;
-	transition: 0.5s;
-	overflow-x: hidden;
-	font-size: 12px;
-}
-
-#instructions-text{
-	margin-left: 25px;
-	margin-right: 25px;
-	margin-bottom: 25px;
-	margin-top: 35px;
-}
-
-#instructions-close{
-	position:absolute;
-	cursor: pointer;
-	right: 0;
-	padding: 15px;
-}
-
-/* Controls */
-#colour-add{
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-#colour-add input{
-	width: 13%;
-	cursor: pointer;
-}
-
-#add-button{
-	font-family: Helvetica;
-	cursor: pointer;
-	display: inline-block;
-	text-align: center;
-	padding: 5px 25px;
-	margin-left: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 1);
-	text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.55);
-	font-size: 12px;
-	background: #fff;
-}
-
-#colour-list{
-	position: relative;
-	padding-bottom: 20px;
-	width: 80%;
-	max-width: 800px;
 	left: 50%;
 	transform: translateX(-50%);
 	-webkit-transform: translateX(-50%);
 	-moz-transform: translateX(-50%);
-	-o-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	height: 0%;
+	width: 100%;
+	max-width: 800px;
+	background: #333;
+	color: #fff;
+	transition: 0.5s;
+	overflow-y: hidden;
+	font-size: 12px;
+}
+
+#instructions-text{
+	margin: 0 15px;
+}
+
+#instructions-close{
+	cursor: pointer;
+	padding: 10px;
+	text-align: right;
+}
+
+/* Controls */
+#controls{
+	position: relative;
+	display: inline-block;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	width: 80%;
+	max-width: 800px;
+}
+
+#colour-add{
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+	padding-top: 20px;
+	width: 29%;
+}
+
+#colour-add input{
+	width: 90%;
+	cursor: pointer;
+}
+
+#add-button{
+	cursor: pointer;	
+	display: inline-block;
+	width: 90%;
+	text-align: center;
+	padding: 5px 25px;
+	border-radius: 5px;
+	font-size: 12px;
+	background: #fff;
+	border: 1px solid #000;
+	color: #000;
+	transition: 0.3s;
+}
+
+#add-button:hover{
+	background: #000;
+	color: #fff;
+	transition: 0.3s;
+}
+
+#add-button:active{
+	background: #222;
+	color: #fff;
+	transition: 0.1s;
+}
+
+#colour-list{
+	position: relative;
+	display: inline-block;
+	text-align: center;
+	padding-top: 20px;
+	width: 69%;
 }
 
 .colour-container{
 	position: relative;
-	width: 25%;
+	width: 50%;
 	display: inline-block;
 	text-align: center;
 }
@@ -175,7 +210,7 @@ input{
 }
 
 .colour-remove{
-	color: #e2e2d2;
+	color: #fff;
 	cursor: pointer;
 	display: inline;
 	margin-left: 5px;
@@ -198,4 +233,63 @@ input{
 	100%{ 
 		transform: rotate(180deg); 
 	} 
+}
+
+/* Responsiveness */
+@media screen and  (max-width: 700px){
+	#play-button{
+		font-size: 70px;
+	}
+}
+
+@media screen and  (max-width: 600px){
+	#play-button{
+		font-size: 60px;
+	}
+}
+
+@media screen and (max-width: 450px){
+	#colour-list{
+		width:64%;
+	}
+
+	#colour-add{
+		width:34%;
+	}
+}
+
+@media screen and (max-width: 350px){
+	.menu-item{
+		font-size: 10px;
+		padding-left: 8px;
+		padding-right: 20px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	#instructions{
+		font-size: 10px;
+	}
+
+	#play-button{
+		font-size: 50px;
+	}
+
+	#colour-add, #colour-list{
+		width: 100%;
+	}
+
+	input, .colour-remove{
+		font-size: 8px;
+	}
+
+	#add-button{
+		font-size: 10px;
+	}
+}
+
+@media screen and (max-width: 300px){
+	#play-button{
+		font-size: 40px;
+	}
 }
