@@ -37,10 +37,7 @@ html, body{
 	display: inline-block;
 	color: #fff;
 	font-size: 12px;
-	padding-left: 10px;
-	padding-right: 25px;
-	padding-top: 10px;
-	padding-bottom: 10px;
+	padding: 20px 20px;
 }
 
 .menu-icon{
@@ -255,15 +252,16 @@ input{
 	#colour-add{
 		width:34%;
 	}
+
+	.menu-item{
+		padding: 20px 12px
+	}
 }
 
 @media screen and (max-width: 350px){
 	.menu-item{
 		font-size: 10px;
-		padding-left: 8px;
-		padding-right: 20px;
-		padding-top: 8px;
-		padding-bottom: 8px;
+		padding: 15px 10px;
 	}
 
 	#instructions{
@@ -288,6 +286,19 @@ input{
 }
 
 @media screen and (max-width: 300px){
+	.menu-item{
+		font-size: 9px;
+		padding: 15px 5px
+	}
+
+	#instructions{
+		font-size: 9px;
+	}
+
+	#add-button{
+		font-size: 9px;
+	}
+
 	#play-button{
 		font-size: 40px;
 	}
