@@ -121,23 +121,28 @@ a{
 	color: #fff;
 	transition: 0.5s;
 	transition-property: height;
-	overflow-y: hidden;
 	font-size: 14px;
 	text-align: justify;
+	overflow-y: hidden;
 }
 
-.instructions-text{
+#instructions-text{
+	height: 90%;
 	padding-left: 5%;
 	padding-right: 5%;
+	overflow-y: hidden;
+}
+
+#instructions-text p{
 	padding-bottom: 2%;
 }
 
 #instructions-close{
 	cursor: pointer;
 	padding-right: 2%;
-	padding-top: 1%;
-	padding-bottom: 1%;
+	height: 10%;
 	text-align: right;
+	vertical-align: top;
 }
 
 /* Controls */
@@ -268,6 +273,15 @@ input{
 
 	#instructions{
 		font-size: 12px;
+	}
+
+	#instructions-close{
+		height: 15%;
+		font-size: 12px;
+	}
+
+	#instructions-text{
+		height: 85%;
 	}
 
 	#play-button{
