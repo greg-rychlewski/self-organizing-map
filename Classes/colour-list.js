@@ -11,8 +11,8 @@ ColourList.prototype.add = function(colour){
 		return;
 	}
 
-	var newColour = new ColourPicker(this, colour);	
-	this.container.append(newColour.container);
+	var newColour = new ColourPicker(this, colour);
+	this.container.appendChild(newColour.container);
 
 	if (this.size == 0){
 		this.root = newColour;
