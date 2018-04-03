@@ -29,11 +29,13 @@ document.getElementById("menu-restart").addEventListener("click", function(){
 document.getElementById("menu-instructions").addEventListener("click", function(){
 	var instructions = document.getElementById("instructions");
 	instructions.style.height = "75%";
+	instructions.style.border = "5px solid #333";
 	instructions.style.overflowY = "auto";
 });
 
 document.getElementById("instructions-close").addEventListener("click", function(){
 	var instructions = document.getElementById("instructions");
 	instructions.style.height = "0";
+	instructions.style.border = "none";
 	instructions.style.overflowY = "hidden";
 })

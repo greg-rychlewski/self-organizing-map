@@ -120,6 +120,7 @@ a{
 	background: #333;
 	color: #fff;
 	transition: 0.5s;
+	transition-property: height;
 	overflow-y: hidden;
 	font-size: 14px;
 	text-align: justify;
