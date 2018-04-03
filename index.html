@@ -6,47 +6,47 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	</head>
 	<body>
-			<div id="menu">
-				<div class="menu-item">
-					<div id="menu-instructions">
-						<i class="fas fa-info-circle menu-icon" aria-hidden="true"></i><span class="menu-text">Instructions</span>
-					</div>
-				</div><!--
-				--><div class="menu-item">
-					<div id="menu-restart">
-						<i class="fas fa-sync menu-icon" aria-hidden="true"></i><span class="menu-text">Restart</span>
-					</div>
-				</div><!--
-				--><div class="menu-item">
-					<div id="menu-git">
-						<a href="https://github.com/greg-rychlewski/self-organizing-map" target="_blank">
-							<i class="fab fa-github menu-icon"></i><span class="menu-text">GitHub</span>
-						</a>
-					</div>
+		<div id="menu">
+			<div class="menu-item">
+				<div id="menu-instructions">
+					<i class="fas fa-info-circle menu-icon" aria-hidden="true"></i><span class="menu-text">Instructions</span>
+				</div>
+			</div><!--
+			--><div class="menu-item">
+				<div id="menu-restart">
+					<i class="fas fa-sync menu-icon" aria-hidden="true"></i><span class="menu-text">Restart</span>
+				</div>
+			</div><!--
+			--><div class="menu-item">
+				<div id="menu-git">
+					<a href="https://github.com/greg-rychlewski/self-organizing-map" target="_blank">
+						<i class="fab fa-github menu-icon"></i><span class="menu-text">GitHub</span>
+					</a>
 				</div>
 			</div>
+		</div>
 
-			<div id="main">
-				<canvas id="canvas"></canvas>
-				<div id="play-button">
-					<i class="fas fa-play-circle hover" aria-hidden="true"></i>
-					<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
-				</div>
-				<div id="instructions">
-					<div id="instructions-close">&#10006;</div>
-					<p class="instructions-text">This application is based on the self-organizing map technique from machine learning. Self-organizing maps are used to visualize the structure of high-dimensional data in a way that is easy to comprehend. Typically, data that is three-dimensional or higher is grouped and organized on a two-dimensional plane.</p>
-					<p class="instructions-text">In the center of the page is a random assortment of colours. Each colour represents a data point in three-dimensional space (one dimension for each of its components: red, green, and blue). Pressing the play button will show how the self-organizing map organizes them on the plane. Once the algorithm is completed, the colours will be separated into the groups on the bottom of the page. Colours that are related to each other will be grouped closer together. For example, cyan and magenta will be next to blue becuase you can add them together to create blue.</p>
-					<p class="instructions-text">You may add or remove colour groups using the controls at the bottom of the page. To restart the animation, click the button at the top of the page.</p>
-				</div>
+		<div id="main">
+			<canvas id="canvas"></canvas>
+			<div id="play-button">
+				<i class="fas fa-play-circle hover" aria-hidden="true"></i>
+				<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
 			</div>
+			<div id="instructions">
+				<div id="instructions-close">&#10006;</div>
+				<p class="instructions-text">This application is based on the self-organizing map technique from machine learning. Self-organizing maps are used to visualize the structure of high-dimensional data in a way that is easy to comprehend. Typically, data that is three-dimensional or higher is grouped and organized on a two-dimensional plane.</p>
+				<p class="instructions-text">In the center of the page is a random assortment of colours. Each colour represents a data point in three-dimensional space (one dimension for each of its components: red, green, and blue). Pressing the play button will show how the self-organizing map organizes them on the plane. Once the algorithm is completed, the colours will be separated into the groups on the bottom of the page. Colours that are related to each other will be grouped closer together. For example, cyan and magenta will be next to blue becuase you can add them together to create blue.</p>
+				<p class="instructions-text">You may add or remove colour groups using the controls at the bottom of the page. To restart the animation, click the button at the top of the page.</p>
+			</div>
+		</div>
 
-			<div id="controls">
-				<div id="colour-add">
-					<input class="jscolor" id="add-input" value="b8860b"/>
-					<div id="add-button">Add Colour</div>
-				</div>
-				<div id="colour-list"></div>
+		<div id="controls">
+			<div id="colour-add">
+				<input class="jscolor" id="add-input" value="b8860b"/>
+				<div id="add-button">Add Colour</div>
 			</div>
+			<div id="colour-list"></div>
+		</div>
 		<script src="scripts/data.js"></script>
 		<script src="classes/som.js"></script>
 		<script src="classes/colour-list.js"></script>
