@@ -221,7 +221,11 @@ input{
 	padding-top: 3px;
 	padding-bottom: 3px;
 	border: 1px solid rgba(0, 0, 0, 0.5);
-	font-size: 16px;
+	font-size: 12px;
+}
+
+#colour-add input{
+	font-size: 20px;
 }
 
 #colour-list input{
