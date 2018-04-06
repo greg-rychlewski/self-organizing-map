@@ -18,7 +18,7 @@ window.onresize = function(){
 }
 
 document.getElementById("add-button").addEventListener("click", function(){
-	var newColour = HexToRGB(document.getElementById("add-input").value);
+	var newColour = parseRGB(document.getElementById("add-input").style.backgroundColor);
 	colourList.add(newColour);
 });
 

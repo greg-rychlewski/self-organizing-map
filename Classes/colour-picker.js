@@ -10,6 +10,8 @@ function ColourPicker(colourList, initColour){
 	this.input = document.createElement("input");
 	
 	var colourPicker = new jscolor(this.input);
+	colourPicker.valueElement = null;
+	this.input.value = "";
 	colourPicker.fromRGB(initColour.red, initColour.green, initColour.blue);
 	colourPicker.showOnClick = false;
 	
