@@ -103,7 +103,16 @@ a{
 #play-button .fa-play-circle{
 	-webkit-filter: drop-shadow( 0 0 1px rgba(0, 0, 0, 0.5) ); 
 	filter: drop-shadow( 0 0 1px rgba(0, 0, 0, 0.5) );
-} 
+}
+
+.info-header {
+	font-weight: 550;
+	text-align: center;
+}
+
+.info-body {
+	text-align: center;
+}
 
 /* Instructions */
 #instructions{
@@ -172,6 +181,7 @@ a{
 	width: 50px;
 	height: 50px;
 	border-radius: 50%;
+	box-shadow: 1px 1px 3px #000;
 }
 
 #add-button{
@@ -180,7 +190,7 @@ a{
 	text-align: center;
 	background: #fff;
 	box-shadow: 1px 1px 3px #000;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #000;
 	padding: 15px 25px;
@@ -294,7 +304,7 @@ input{
 	}
 
 	#add-button{
-		font-size: 12px;
+		font-size: 14px;
 		width: 150px;
 	}
 }
@@ -313,7 +323,7 @@ input{
 
 	#add-button{
 		width: 125px;
-		font-size: 10px;
+		font-size: 12px;
 	}
 
 	#play-button{
