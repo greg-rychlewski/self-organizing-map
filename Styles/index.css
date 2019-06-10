@@ -105,15 +105,15 @@ a{
 	filter: drop-shadow( 0 0 1px rgba(0, 0, 0, 0.5) );
 }
 
-.info-header {
-	font-weight: 550;
+#info {
+	background: #fff;
 	text-align: center;
+	padding-top: 40px;
 }
 
-.info-body {
-	text-align: center;
-	padding-top: 15px;
-	padding-bottom: 15px;
+#info-header {
+	font-weight: 550;
+	padding-bottom: 20px;
 }
 
 /* Instructions */
@@ -275,6 +275,10 @@ input{
 @media screen and  (max-width: 700px){
 	#play-button{
 		font-size: 70px;
+	}
+
+	#info {
+		display: none;
 	}
 }
 
