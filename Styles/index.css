@@ -279,7 +279,7 @@ input{
 		font-size: 70px;
 	}
 
-	#info {
+	#info-header, #info-body {
 		display: none;
 	}
 }
