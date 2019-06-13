@@ -106,6 +106,7 @@ a{
 }
 
 #info {
+	position: relative;
 	background: #fff;
 	text-align: center;
 	padding-top: 40px;
@@ -135,6 +136,7 @@ a{
 	font-size: 14px;
 	text-align: justify;
 	overflow-y: hidden;
+	z-index: 1;
 }
 
 #instructions-text{

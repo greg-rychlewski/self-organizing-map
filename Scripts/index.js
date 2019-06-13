@@ -30,7 +30,7 @@ document.getElementById("menu-instructions").addEventListener("click", function(
 	var instructions = document.getElementById("instructions");
 	var instructionsText = document.getElementById("instructions-text");
 
-	instructions.style.height = "75%";
+	instructions.style.height = "400%";
 	instructions.style.border = "5px solid #333";
 	instructionsText.style.overflowY = "scroll";
 });

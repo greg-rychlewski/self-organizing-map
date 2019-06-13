@@ -29,14 +29,6 @@
 		<div id ="info">
 			<p id="info-header">Self-Organizing Map</p>
 			<p id="info-body">A machine learning algorithm that groups together objects with similar properties (such as colours)</p>
-		</div>
-
-		<div id="main">
-			<canvas id="canvas"></canvas>
-			<div id="play-button">
-				<i class="fas fa-play-circle hover" aria-hidden="true"></i>
-				<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
-			</div>
 			<div id="instructions">
 				<div id="instructions-close">&#10006;</div>
 				<div id="instructions-text">
@@ -44,6 +36,14 @@
 					<p >In the center of the page is a random assortment of colours. Each colour represents a data point in three-dimensional space (one dimension for each of its components: red, green, and blue). Pressing the play button will show how the self-organizing map organizes them on the plane. Once the algorithm has finished, the colours will be separated into the groups on the bottom of the page. Colours that are related to each other will be grouped closer together. For example, cyan and magenta will be next to blue because you can add them together to create blue.</p>
 					<p>You may add or remove colour groups using the controls at the bottom of the page. To restart the animation, click the button at the top of the page.</p>
 				</div>
+			</div>
+		</div>
+
+		<div id="main">
+			<canvas id="canvas"></canvas>
+			<div id="play-button">
+				<i class="fas fa-play-circle hover" aria-hidden="true"></i>
+				<i class="far fa-play-circle no-hover" aria-hidden="true"></i>
 			</div>
 		</div>
 
